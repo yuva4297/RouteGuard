@@ -6,11 +6,8 @@ import { Injectable } from '@angular/core';
 export class GuardService {
   restrictAccess: boolean;
   constructor( ) { 
-    this.restrictAccess = true;
+    this.restrictAccess = false;
   }
 
-  changeAccess()
-  {
-    this.restrictAccess != this.restrictAccess;
-  }
+ 
 }
