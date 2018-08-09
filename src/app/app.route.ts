@@ -12,7 +12,8 @@ export const route: Routes = [
 },
 {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    data: { title: 'Dashboard'}
 },
 {
     path: '',

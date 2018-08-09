@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GuardService } from '../guard.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +10,7 @@ import { GuardService } from '../guard.service';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private router: Router, private guardService: GuardService) { 
+  constructor(private router: Router, private guardService: GuardService, private titleService: Title) { 
     this.guardService.restrictAccess = true;
 
   }
@@ -19,6 +20,7 @@ export class UserComponent implements OnInit {
     this.router.navigate(['/admin']);
   }
   ngOnInit() {
+    this.titleService.setTitle('User');
   }
 
 }
